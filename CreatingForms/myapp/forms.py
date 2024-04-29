@@ -7,7 +7,7 @@ SHIFTS = (
 )
 
 
-class InputForm(forms.form):
+class InputForm(forms.Form):
     first_name = forms.CharField(max_length=200)
     last_name = forms.CharField(max_length=200)
     shift = forms.ChoiceField(choices=SHIFTS)
