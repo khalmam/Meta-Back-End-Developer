@@ -1,0 +1,1 @@
+This project helps us learn how to create forms in a Django project.
