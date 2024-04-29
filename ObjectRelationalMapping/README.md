@@ -1,0 +1,1 @@
+This project helps us learn how to use Object Relational Mapping to create a SQL query using object-oriented programming language. This enables  a quick turnaround time in fast production environments that need constant updates.
