@@ -1,0 +1,7 @@
+<p> Booking for Little Lemon ! </p>
+
+<form action = "" method = "post", style="background-color: #4141d3;">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Submit">
+</form>
