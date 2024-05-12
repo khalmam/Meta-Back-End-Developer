@@ -1,11 +1,17 @@
-<footer style="background-color: rgb(0, 255, 34);">
+{% load static %}
+<footer style="background-color: bisque;"></footer>    
+
+<header>
+<img src="{% static 'img/logo.png' %}" alt="">
+
+</header>
+
 <nav>
 <ul>
-<li style="display: inline-block; width: 120px;">Home</li>
-<li style="display: inline-block; width: 120px;">About</li>
-<li style="display: inline-block; width: 120px;">Menu</li>
-
-
+<li><a href="{% url 'home' %}">Home</a></li>
+<li><a href="{% url 'about' %}">About</a></li>
+<li><a href="{% url 'menu' %}">Menu</a></li>
+<li><a href="{% url 'book' %}">Book</a></li>
 
 
 </ul>
