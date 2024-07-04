@@ -6,7 +6,7 @@ from django.core import serializers
 from .models import Booking
 from datetime import datetime
 import json
-# from .forms import BookingForm
+from .forms import BookingForm
 
 def home(request):
     return render(request, 'index.html')
