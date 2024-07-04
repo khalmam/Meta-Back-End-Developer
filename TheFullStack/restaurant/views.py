@@ -1,4 +1,4 @@
-# from django.http import HttpResponse
+from django.http import HttpResponse
 from django.shortcuts import render
 
 from .models import Menu
@@ -14,16 +14,23 @@ def home(request):
 def about(request):
     return render(request, 'about.html')
 
-# def book(request):
-#     form = BookingForm()
-#     if request.method == 'POST':
-#         form = BookingForm(request.POST)
-#         if form.is_valid():
-#             form.save()
-#     context = {'form':form}
-#     return render(request, 'book.html', context)
+def book(request):
+     form = BookingForm()
+     if request.method == 'POST':
+         form = BookingForm(request.POST)
+         if form.is_valid():
+             form.save()
+     context = {'form':form}
+     return render(request, 'book.html', context)
 
 # Add code for the bookings() view
+def bookings(request):
+    date = request.GET.get("date", datetime.today().date)
+    bookings = Booking.objects.all()
+    booking_json = serializers.serialize("json", bookings)
+
+    bookings_data = {"bookings": bookings}
+    return render(request, "bookings.html", {"bookings": bookings_data})
 
 
 
